@@ -18,9 +18,9 @@
   var visiters = document.querySelector('#visiters')
   var browser = document.querySelector('#browser')
   browser.addEventListener("dom-ready", function() {
+    console.log('on domready')
     var url = browser.getUrl();
     visiters.src = BASE_URL + '/visiters?url=' + url + '&title=' + document.title
-    console.log(visiters.src)
   });
 </script>
 
