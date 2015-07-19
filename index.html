@@ -19,7 +19,7 @@
   var browser = document.querySelector('#browser')
   browser.addEventListener("dom-ready", function() {
     var url = browser.getUrl();
-    visiters.src = BASE_URL + '/visiters?url=' + url
+    visiters.src = BASE_URL + '/visiters?url=' + url + '&title=' + document.title
     console.log(visiters.src)
   });
 </script>
