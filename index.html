@@ -9,19 +9,27 @@
 </head>
 
 <body>
-  <webview id='visiters' style="display:inline-block; width:100%; height:100px;" 　src='http://localhost:3000/visiters'></webview>
-  <webview id='browser' src='http://localhost:3000/home' style="display:inline-block; width:100%; height:900px;"></webview>
+  <button onclick='goToHome()'>ホーム</button>
+  <webview id='visiters' style="display:inline-block; width:100%; height:100px;"></webview>
+  <webview id='browser' src='http://syng.meteor.com/home' style="display:inline-block; width:100%; height:900px;"></webview>
 </body>
 <script>
-  var BASE_URL = 'http://localhost:3000'
+  var BASE_URL = 'http://syng.meteor.com'
 
   var visiters = document.querySelector('#visiters')
   browser = document.querySelector('#browser')
+
+  browser.src = BASE_URL + '/home'
+
   browser.addEventListener("dom-ready", function() {
     var url = browser.getUrl();
     var title = browser.getTitle();
     visiters.src = BASE_URL + '/visiters?url=' + url + '&title=' + title
   });
+
+  goToHome = function(){
+    browser.src = BASE_URL + '/home'
+  }
 </script>
 
 </html>
