@@ -1,0 +1,2 @@
+electron-packager ./ Syng --platform=darwin --arch=x64 --version=0.25.1 --out=../dist --icon=./public/icon.icns
+electron-builder ../dist/*/Syng.app --platform=osx --out=../dist --config=config.json
