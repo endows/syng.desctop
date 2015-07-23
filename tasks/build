@@ -1,2 +1,5 @@
-electron-packager ./ Syng --platform=darwin --arch=x64 --version=0.25.1 --out=../dist --icon=./public/icon.icns
+rm -rf ../dist/*
+electron-packager ./ Syng --overwrite --platform=darwin --arch=x64 --version=0.25.1 --out=../dist --icon=./public/icon.icns
+electron-packager ./ Syng --overwrite --platform=win32 --arch=ia32 --version=0.25.1 --out=../dist --icon=./public/icon.icns
 electron-builder ../dist/*/Syng.app --platform=osx --out=../dist --config=config.json
+electron-builder ../dist/*ia32 --platform=win --out=../dist --config=config.json

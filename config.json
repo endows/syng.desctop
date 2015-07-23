@@ -10,7 +10,7 @@
     ]
   },
   "win" : {
-    "title" : "Loopline Systems",
-    "icon" : "assets/win/icon.ico"
+    "title" : "Syng",
+    "icon" : "public/icon.ico"
   }
 }
